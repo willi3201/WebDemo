@@ -1,0 +1,58 @@
+﻿@model WebDemo.Models.Producto
+
+@{
+    ViewBag.Title = "Eliminar";
+    ViewBag.sesion = Session["sesion"];
+}
+
+<h2>Delete</h2>
+
+<h3>¿Esta seguro que desea eliminar?</h3>
+<div>
+    <h4>Producto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nomProducto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomProducto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.valorProducto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.valorProducto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stockProducto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stockProducto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver", "Index")
+        </div>
+    }
+</div>

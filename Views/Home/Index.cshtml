@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Inicio";
+    ViewBag.sesion =Session["sesion"];
+    ViewBag.model = Session["nombre"];
+
+}
+
+<div class="jumbotron">
+    <h1>Bienvenido a demo Web</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Web Api</h2>
+        <p>Para consutar la api de productos ingresar en /api/producto o hacer click en el siguente enlace.</p>
+        <p><a class="btn btn-default" href="/api/producto">Ver Api &raquo;</a></p>
+    </div>
+</div>

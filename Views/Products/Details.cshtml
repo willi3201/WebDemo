@@ -1,0 +1,50 @@
+﻿@model WebDemo.Models.Producto
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Producto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nomProducto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomProducto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.valorProducto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.valorProducto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stockProducto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stockProducto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idProducto }) |
+    @Html.ActionLink("Volver", "Index")
+</p>

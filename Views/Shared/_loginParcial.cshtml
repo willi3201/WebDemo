@@ -1,0 +1,15 @@
+﻿@using System.Data.Entity;
+
+@if (Session["sesion"] != null && Session["sesion"].ToString()=="True")
+{
+<ul class="nav navbar-nav navbar-right">
+    <li><label style="color:gray; margin-top:1.4rem;">@Session["nombre"]</label></li>
+    <li>@Html.ActionLink("Cerrar Sesión", "Logout", "Login", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+</ul>
+}
+else
+{
+        <ul class="nav navbar-nav navbar-right">
+            <li>@Html.ActionLink("Iniciar Sesión", "Login", "Login", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        </ul>
+}
